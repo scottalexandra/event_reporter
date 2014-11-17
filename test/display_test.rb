@@ -73,4 +73,8 @@ class DisplayTest < Minitest::Test
   def test_help_quit
     assert Display.respond_to?(:help_quit)
   end
+
+  def test_invalid_input
+    assert_equal "Input is not valid", Display.invalid_input
+  end
 end

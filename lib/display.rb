@@ -1,3 +1,5 @@
+require 'colorize'
+
 module Display
 
   def self.welcome
@@ -35,11 +37,10 @@ module Display
   def self.help_menu
       puts "Help Menu".blue.center(32,".")
       puts "Get help on the following topics:".red
-      puts "help load/load<filename>"
+      puts "help load"
       puts "help queue count"
       puts "help queue clear"
       puts "help queue print"
-      puts "help queue print by <attribute>"
       puts "help queue save to <filename.csv>"
       puts "help find <attribute><criteria>"
   end
@@ -60,9 +61,6 @@ module Display
 
   def self.help_queue_print
     "Enter 'queue print' to print all entries in current queue."
-  end
-
-  def self.help_queue_print_by_attribute
     "Enter 'queue print by' followed by an attribute to print items in a queue"/
     "sorted by the given attribute."
   end
@@ -81,4 +79,7 @@ module Display
     "press 'q' at anytime to exit help menu"
   end
 
+  def self.invalid_input
+    "Input is not valid"
+  end
 end

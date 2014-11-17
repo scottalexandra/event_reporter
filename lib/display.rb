@@ -35,19 +35,14 @@ module Display
   end
 
   def self.help_menu
-      puts "Help Menu".blue.center(32,".")
-      puts "Get help on the following topics:".red
-      puts "help load"
-      puts "help queue count"
-      puts "help queue clear"
-      puts "help queue print"
-      puts "help queue save to <filename.csv>"
-      puts "help find <attribute><criteria>"
+      "Help Menu\n Get help on the following topics: \nhelp load \n"\
+      "help queue count \nhelp queue clear \nhelp queue print \nhelp queue"\
+      "save to \nhelp find by "
   end
 
   def self.help_load
-    "Enter 'load' followed by the name of a file, to load information in the given"/
-    "file to search from. If no file name is specified, information from"/
+    "Enter 'load' followed by the name of a file, to load information in the given"\
+    "file to search from. If no file name is specified, information from"\
     "'event_reporter.csv' will be loaded by default."
   end
 
@@ -61,17 +56,17 @@ module Display
 
   def self.help_queue_print
     "Enter 'queue print' to print all entries in current queue."
-    "Enter 'queue print by' followed by an attribute to print items in a queue"/
+    "Enter 'queue print by' followed by an attribute to print items in a queue"\
     "sorted by the given attribute."
   end
 
   def self.help_queue_save_to
-    "Enter 'queue_save_to' followed by the file name and extension to save items"/
+    "Enter 'queue_save_to' followed by the file name and extension to save items"\
     "in queue to the specified file."
   end
 
-  def self.help_queue_find_by_attribute_criteria
-    "Enter 'find' followed by an attribute and criteria to return a list of items"/
+  def self.help_queue_find_by
+    "Enter 'find' followed by an attribute and criteria to return a list of items"\
     "containing the criteria when sorted by the specified attribute."
   end
 

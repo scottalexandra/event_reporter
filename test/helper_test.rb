@@ -39,4 +39,9 @@ class HelperTest < Minitest::Test
     help = Helper.new('queue save to')
     assert help.help_queue_save_to?
   end
+
+  def test_help_find_by?
+    help = Helper.new("queue find by")
+    assert help.help_queue_find_by?
+  end
 end

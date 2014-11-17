@@ -33,4 +33,8 @@ class Helper
   def help_queue_save_to?
     user_input == 'help queue save to' || user_input == 'queue save to'
   end
+
+  def help_queue_find_by?
+    user_input == 'help queue find by' || user_input == 'queue find by'
+  end
 end

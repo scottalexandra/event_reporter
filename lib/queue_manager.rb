@@ -2,7 +2,7 @@ require_relative 'entry_repo'
 
 
 class QueueManager
-  attr_reader :new_queue  #:entry_repo
+  attr_reader :new_queue
 
 
   def initialize
@@ -22,6 +22,7 @@ class QueueManager
   end
 
   def print
+    
   end
 
   def print_by

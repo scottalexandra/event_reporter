@@ -18,9 +18,10 @@ class QueueManagerTest < Minitest::Test
     assert queue.respond_to?(:count)
   end
 
-  def test_queue_count_counts_que
+  def test_queue_count_counts_queue
     queue = QueueManager.new
-    assert_equal 0, queue.count
+    queue.add_queue([1,2,3])
+    assert_equal 3, queue.count
   end
 
   def test_add_queue_adds_queues_to_new_queue_array
@@ -37,10 +38,10 @@ class QueueManagerTest < Minitest::Test
     assert_equal 2, queue.count
   end
 
-  def test_queue_print_exits
-    queue = QueueManager.new
-    assert queue.respond_to?(:print)
-  end
+  # def test_queue_print_exits
+  #   queue = QueueManager.new
+  #   assert queue.respond_to?(:print)
+  # end
 
   def test_queue_print_by_exits
     queue = QueueManager.new

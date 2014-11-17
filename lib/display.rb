@@ -74,6 +74,10 @@ module Display
     "press 'q' at anytime to exit help menu"
   end
 
+  def self.header
+    "LAST NAME \tFIRST NAME \t\tEMAIL \t\t\t \tZIPCODE \tCITY \tSTATE \tADDRESS \t\t\t \tPHONE"
+  end
+
   def self.invalid_input
     "Input is not valid"
   end

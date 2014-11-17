@@ -1,4 +1,4 @@
-class Helper
+class EvaluateInput
 
   attr_accessor :user_input
 
@@ -37,4 +37,10 @@ class Helper
   def help_queue_find_by?
     user_input == 'help queue find by' || user_input == 'queue find by'
   end
+
+  def print?
+    user_input == 'queue print'
+  end
+
+
 end

@@ -10,6 +10,10 @@ class EvaluateInput
     user_input == 'q' || user_input == 'quit'
   end
 
+  def root_menu?
+    user_input == 'm' || user_input == "main menu"
+  end
+
   def help_menu?
     user_input == 'h' || user_input == 'help'
   end
@@ -34,13 +38,11 @@ class EvaluateInput
     user_input == 'help queue save to' || user_input == 'queue save to'
   end
 
-  def help_queue_find_by?
-    user_input == 'help queue find by' || user_input == 'queue find by'
+  def help_find_by?
+    user_input == 'help find by' || user_input == 'find by'
   end
 
   def print?
     user_input == 'queue print'
   end
-
-
 end

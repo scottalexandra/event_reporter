@@ -1,6 +1,5 @@
 class Entry
 
-  ATTRIBUTES = [:first_name, :last_name, :email_address, :home_phone, :street, :city, :state, :zipcode]
 
   attr_reader :first_name, :last_name, :email_address, :home_phone, :street, :city, :state, :zipcode
 
@@ -13,14 +12,17 @@ class Entry
     @city          = data[:city].to_s.downcase
     @state         = data[:state].to_s.downcase
     @street        = data[:street].to_s.downcase
+    @data          = Loader.create_entries_from
   end
 
   def name
     "#{@first_name} #{@last_name}"
   end
 
-  def to_csv
-    ATTRIBUTES.map {|attribute| "#{send attribute}"}.join(",")
+  def format_for_csv
+    instance_variables.map do |ivar|
+      instance_variable_get(ivar)
+    end
   end
 
-end
+  

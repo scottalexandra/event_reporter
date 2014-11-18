@@ -38,19 +38,9 @@ class QueueManagerTest < Minitest::Test
     assert_equal 2, queue.count
   end
 
-  # def test_queue_print_exits
-  #   queue = QueueManager.new
-  #   assert queue.respond_to?(:print)
-  # end
-
   def test_queue_print_by_exits
     queue = QueueManager.new
     assert queue.respond_to?(:print_by)
-  end
-
-  def test_queue_save_exits
-    queue = QueueManager.new
-    assert queue.respond_to?(:save)
   end
 
   def test_queue_save_to_exits

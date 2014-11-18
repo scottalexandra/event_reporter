@@ -4,7 +4,7 @@ require_relative 'loader'
 class EntryRepo
   attr_reader :entries
   def initialize(entries)
-    @entries ||= entries.map { |entry| Entry.new(entry) }
+    @entries = entries
   end
 
   def search_by_last_name(last_name)

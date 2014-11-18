@@ -27,9 +27,9 @@ class QueueManager
   def print_out_queue(attribute)
     sort_by(attribute) if attribute
     new_queue.map do |entry|
-      puts "#{entry.first_name}\t#{entry.last_name}\t#{entry.email}\t#{entry.phone_number}\t#{entry.street}\t#{entry.city}\t#{entry.state}\t#{entry.zipcode}\n\}"
+      puts entry.format_for_print
     end
-   end
+  end
 
   def sort_by(attribute)
     new_queue.sort! { |entry| entry.send(attribute) }
@@ -45,9 +45,7 @@ class QueueManager
     end
   end
 
-def format_for_print
-  "#{first_name}\t#{last_name}\t#{email_address}\t#{home_phone}\t#{street}\t#{entry.city}\t#{entry.state}\t#{zipcode}\n\}"
-end
+
 end
 
 end

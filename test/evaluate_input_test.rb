@@ -2,6 +2,7 @@ gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
 require_relative '../lib/evaluate_input'
+require_relative 'test_defaults'
 
 class EvaluateInputTest < Minitest::Test
 
@@ -41,7 +42,7 @@ class EvaluateInputTest < Minitest::Test
   end
 
   def test_help_find_by?
-    help = EvaluateInput.new("queue find by")
-    assert help.help_queue_find_by?
+    help = EvaluateInput.new("help find by")
+    assert help.help_find_by?
   end
 end

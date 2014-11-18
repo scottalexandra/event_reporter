@@ -1,3 +1,5 @@
+require 'simplecov'
+SimpleCov.start
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
@@ -11,11 +13,11 @@ class DisplayTest < Minitest::Test
   end
 
   def test_root_menu
-    assert_equal "Press 'h' for help. Press 'q' for quit.", Display.root_menu
+    assert_equal "Main Menu: Press 'h' for help. Press 'q' for quit.", Display.root_menu
   end
 
   def test_command_prompt
-    assert_equal "Enter a command: ", Display.command_prompt
+    assert_equal "Enter a command (press 'm' for main menu): ", Display.command_prompt
   end
 
   def test_quitting
@@ -58,16 +60,16 @@ class DisplayTest < Minitest::Test
     assert Display.respond_to?(:help_queue_print)
   end
 
-  def test_help_queue_print_by_attribute
-    assert Display.respond_to?(:help_queue_print_by_attribute)
+  def test_help_queue_print_by
+    assert Display.respond_to?(:help_queue_print)
   end
 
   def test_help_queue_save_to
     assert Display.respond_to?(:help_queue_save_to)
   end
 
-  def test_help_queue_find_by_attribute_criteria
-    assert Display.respond_to?(:help_queue_find_by_attribute_criteria)
+  def test_help_find_by
+    assert Display.respond_to?(:help_find_by)
   end
 
   def test_help_quit

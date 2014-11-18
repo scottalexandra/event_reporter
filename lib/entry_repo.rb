@@ -1,4 +1,5 @@
 require_relative 'entry'
+require_relative 'loader'
 
 class EntryRepo
   attr_reader :entries

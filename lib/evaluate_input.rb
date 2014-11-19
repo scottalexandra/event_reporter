@@ -11,8 +11,10 @@ class EvaluateInput
   end
 
   def return_find_by_criteria
-    criteria = user_input.split[-2..-1]
+    user_input.split[-2..-1] if user_input.split.count > 3
   end
+  
+  def
 
   def quit?
     user_input == 'q' || user_input == 'quit'
@@ -49,13 +51,6 @@ class EvaluateInput
   def help_find_by?
     user_input == 'help find by' || user_input == 'find by'
   end
-
-
-
-
-  # def print?
-  #   user_input == 'queue print'
-  # end
 
   def load?
     user_input.include?('load')

@@ -63,18 +63,22 @@ class Cli
   def process_program_commands(eval_input)
     queue = QueueManager.new
     if eval_input.load?
-      filename = eval_input.return_attribute # if no file name is entered
-      # require 'pry'
-      # binding.pry
+      filename = eval_input.return_attribute
       Loader.create_entries_from(filename)
-      elsif eval_input.queue_count?
-      outstream.puts "#{queue.count}"
+      outstream.puts Display.load_file
+    elsif eval_input.queue_count?
+      outstream.puts Display.count("#{queue.count}")
     elsif eval_input.queue_clear?
       queue.clear
-    elsif eval_input.queue_print?
-      attribute = eval_input.return_attribute #parse user_input
-      queue.print_out_queue(attribute)
-    end
+      outstream.puts Display.clear
+    # elsif eval_input.queue_print?
+    #   new_queue = queue.print_out_queue
+    #   require 'pry'
+    #   binding.pry
+    #   outstream.puts new_queue
+    # elsif eval_input.find_by?
+    #   criteria = eval_input.return_find_by_criteria
+    # end
   end
 
 

@@ -18,8 +18,8 @@ module Display
     "You are now exiting Event Reporter. Goodbye!"
   end
 
-  def self.load(filename)
-    "#{filename} loaded successfully"
+  def self.load_file
+    "File loaded successfully"
   end
 
   def self.count(number)

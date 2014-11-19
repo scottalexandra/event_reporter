@@ -24,8 +24,8 @@ class DisplayTest < Minitest::Test
     assert_equal "You are now exiting Event Reporter. Goodbye!", Display.quitting
   end
 
-  def test_load
-    assert_equal "NewFile loaded successfully", Display.load("NewFile")
+  def test_load_file
+    assert_equal "File loaded successfully", Display.load_file
   end
 
   def test_count
@@ -70,10 +70,6 @@ class DisplayTest < Minitest::Test
 
   def test_help_find_by
     assert Display.respond_to?(:help_find_by)
-  end
-
-  def test_help_quit
-    assert Display.respond_to?(:help_quit)
   end
 
   def test_invalid_input

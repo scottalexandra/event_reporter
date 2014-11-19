@@ -14,7 +14,6 @@ class EvaluateInput
     user_input.split[-2..-1] if user_input.split.count > 3
   end
   
-  def
 
   def quit?
     user_input == 'q' || user_input == 'quit'

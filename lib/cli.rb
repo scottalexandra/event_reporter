@@ -78,7 +78,7 @@ class Cli
     #   outstream.puts new_queue
     # elsif eval_input.find_by?
     #   criteria = eval_input.return_find_by_criteria
-    # end
+     end
   end
 
 

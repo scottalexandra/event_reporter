@@ -25,7 +25,7 @@ class Cli
       user_input = instream.gets.strip
       eval_input = EvaluateInput.new(user_input)
       break if eval_input.quit?
-      proccess_initial_commands(eval_input)
+      process_initial_commands(eval_input)
     end
     outstream.puts Display.quitting
   end
@@ -35,7 +35,7 @@ class Cli
       outstream.puts Display.help_menu
       process_help_commands(eval_input)
     else
-      process_program_commands
+      process_program_commands(eval_input)
     end
 
   end
@@ -63,16 +63,18 @@ class Cli
   def process_program_commands(eval_input)
     queue = QueueManager.new
     if eval_input.load?
-      #parse user_input
-      Loader.creat_entries_from(eval_input)   #don't know how to get the file name seperate from the rest of the input??
+      filename = eval_input.return_attribute # if no file name is entered
+      # require 'pry'
+      # binding.pry
+      Loader.create_entries_from(filename)
       elsif eval_input.queue_count?
-      queue.count
+      outstream.puts "#{queue.count}"
     elsif eval_input.queue_clear?
       queue.clear
     elsif eval_input.queue_print?
-      #parse user_input
-      queue.print_out_queue
-    elsif
+      attribute = eval_input.return_attribute #parse user_input
+      queue.print_out_queue(attribute)
+    end
   end
 
 

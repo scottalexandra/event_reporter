@@ -5,9 +5,9 @@ class EvaluateInput
   def initialize(user_input)
     @user_input = user_input.downcase
   end
-  
+
   def return_attribute
-    user_input.split[-1]
+    user_input.split[-1] if user_input.split.count > 2
   end
 
   def return_find_by_criteria

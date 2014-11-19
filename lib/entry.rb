@@ -10,7 +10,7 @@ class Entry
     @city          = data[:city].to_s.downcase
     @state         = data[:state].to_s.downcase
     @street        = data[:street].to_s.downcase
-    @data          = Loader.create_entries_from
+    #@data          = Loader.create_entries_from
   end
 
   def name

@@ -11,7 +11,7 @@ class Sanitizer
   end
 
   def clean_home_phone(home_phone)
-    home_phone.to_s.scan(/\d/).join.rjust(10, "0")[0..12]
+    home_phone.to_s.scan(/\S+[\s]\d+[\D]\d{4}/).join.rjust(14, "0")[0..14]
   end
 
   def clean_city(city)

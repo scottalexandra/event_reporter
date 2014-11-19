@@ -1,76 +1,71 @@
 {
   "Unit Tests": {
     "coverage": {
-<<<<<<< HEAD
-      "/Users/robinsonalex/Turing/event_reporter/lib/display.rb": [
-=======
-      "/Users/JMNavarro/Turing/Event_Reporter/lib/sanitizer.rb": [
->>>>>>> ed99df63a59516d3d200359c8995bd3ff44c22a5
-        1,
-        null,
-        1,
-        null,
-<<<<<<< HEAD
+      "/Users/JMNavarro/Turing/Event_Reporter/lib/entry_repo.rb": [
         1,
         1,
         null,
-        null,
         1,
         1,
-        null,
-        null,
         1,
-        1,
+        34,
         null,
         null,
         1,
-        1,
+        4,
         null,
         null,
         1,
-        1,
-        null,
-        null,
-=======
->>>>>>> ed99df63a59516d3d200359c8995bd3ff44c22a5
-        1,
-        1,
+        4,
         null,
         null,
         1,
-        1,
-<<<<<<< HEAD
+        4,
         null,
         null,
         1,
+        4,
+        null,
+        null,
         1,
-=======
->>>>>>> ed99df63a59516d3d200359c8995bd3ff44c22a5
+        5,
+        null,
+        null,
+        1,
+        5,
+        null,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        4,
+        null,
+        null
+      ],
+      "/Users/JMNavarro/Turing/Event_Reporter/lib/entry.rb": [
+        1,
+        1,
+        null,
+        1,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        null,
+        null,
+        null,
+        1,
+        4,
         null,
         null,
         1,
         0,
-        null,
-<<<<<<< HEAD
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        null,
         0,
         null,
         null,
@@ -78,40 +73,25 @@
         1,
         0,
         null,
-=======
-        null,
+        null
+      ],
+      "/Users/JMNavarro/Turing/Event_Reporter/lib/loader.rb": [
         1,
         1,
-        null,
-        null,
         1,
-        1,
->>>>>>> ed99df63a59516d3d200359c8995bd3ff44c22a5
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
         null,
         1,
         0,
         null,
         null,
-        1,
+        null,
+        0,
         0,
         null,
-        null,
-        1,
-        1,
         null,
         null
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1416345089
-=======
-    "timestamp": 1416359710
->>>>>>> ed99df63a59516d3d200359c8995bd3ff44c22a5
+    "timestamp": 1416428180
   }
 }

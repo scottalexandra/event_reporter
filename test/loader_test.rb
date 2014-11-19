@@ -8,8 +8,8 @@ class LoaderTest < Minitest::Test
     assert 'data/event_attendees.csv', file
   end
 
-  def test_saved_queue_file
-    file = Loader.new#('./data/fake_data.csv')
-    assert 'data/fake_data.csv', file
-  end
-end
+#   def test_saved_queue_file
+#     file = Loader.new#('./data/fake_data.csv')
+#     assert 'data/fake_data.csv', file
+#   end
+# end

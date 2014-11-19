@@ -1,19 +1,16 @@
 {
   "Unit Tests": {
     "coverage": {
+<<<<<<< HEAD
       "/Users/robinsonalex/Turing/event_reporter/lib/display.rb": [
+=======
+      "/Users/JMNavarro/Turing/Event_Reporter/lib/sanitizer.rb": [
+>>>>>>> ed99df63a59516d3d200359c8995bd3ff44c22a5
         1,
         null,
         1,
         null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
+<<<<<<< HEAD
         1,
         1,
         null,
@@ -34,8 +31,28 @@
         1,
         null,
         null,
+=======
+>>>>>>> ed99df63a59516d3d200359c8995bd3ff44c22a5
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+<<<<<<< HEAD
+        null,
+        null,
+        1,
+        1,
+=======
+>>>>>>> ed99df63a59516d3d200359c8995bd3ff44c22a5
+        null,
+        null,
+        1,
+        0,
+        null,
+<<<<<<< HEAD
+        null,
         null,
         null,
         1,
@@ -48,12 +65,6 @@
         0,
         null,
         null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
         1,
         0,
         null,
@@ -67,10 +78,19 @@
         1,
         0,
         null,
+=======
+        null,
+        1,
+        1,
         null,
         null,
         1,
-        0,
+        1,
+>>>>>>> ed99df63a59516d3d200359c8995bd3ff44c22a5
+        null,
+        null,
+        1,
+        1,
         null,
         null,
         null,
@@ -88,6 +108,10 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1416345089
+=======
+    "timestamp": 1416359710
+>>>>>>> ed99df63a59516d3d200359c8995bd3ff44c22a5
   }
 }

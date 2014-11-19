@@ -45,7 +45,4 @@ class QueueManager
     end
   end
 
-
-end
-
 end

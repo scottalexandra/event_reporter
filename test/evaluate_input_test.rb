@@ -34,12 +34,12 @@ class EvaluateInputTest < Minitest::Test
   end
 
   def test_load_works
-    help = EvaluateInput.new('load')
+    help = EvaluateInput.new('help load')
     assert help.help_load?
   end
 
   def test_help_queue_count?
-    help = EvaluateInput.new('queue count')
+    help = EvaluateInput.new('help queue count')
     assert help.help_queue_count?
   end
 
@@ -54,7 +54,7 @@ class EvaluateInputTest < Minitest::Test
   end
 
   def test_help_queue_save_to?
-    help = EvaluateInput.new('queue save to')
+    help = EvaluateInput.new('help queue save to')
     assert help.help_queue_save_to?
   end
 

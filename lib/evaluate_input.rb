@@ -13,7 +13,7 @@ class EvaluateInput
   def return_find_by_criteria
     user_input.split[-2..-1] if user_input.split.count > 3
   end
-  
+
 
   def quit?
     user_input == 'q' || user_input == 'quit'
@@ -28,27 +28,27 @@ class EvaluateInput
   end
 
   def help_load?
-    user_input == 'help load' || user_input == 'load'
+    user_input == 'help load'
   end
 
   def help_queue_count?
-    user_input == 'help queue count' || user_input == 'queue count'
+    user_input == 'help queue count'
   end
 
   def help_queue_clear?
-    user_input == 'help queue clear' || user_input == 'queue clear'
+    user_input == 'help queue clear'
   end
 
   def help_queue_print?
-    user_input == 'help queue print' || user_input == 'queue print'
+    user_input == 'help queue print'
   end
 
   def help_queue_save_to?
-    user_input == 'help queue save to' || user_input == 'queue save to'
+    user_input == 'help queue save to'
   end
 
   def help_find_by?
-    user_input == 'help find by' || user_input == 'find by'
+    user_input == 'help find by' 
   end
 
   def load?

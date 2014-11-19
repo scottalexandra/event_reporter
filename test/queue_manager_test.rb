@@ -40,12 +40,12 @@ class QueueManagerTest < Minitest::Test
 
   def test_queue_print_by_exits
     queue = QueueManager.new
-    assert queue.respond_to?(:print_by)
+    assert queue.respond_to?(:print_out_queue)
   end
 
   def test_queue_save_to_exits
     queue = QueueManager.new
-    assert queue.respond_to?(:save_to)
+    assert queue.respond_to?(:queue_save_to)
   end
 
 

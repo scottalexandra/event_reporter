@@ -40,21 +40,29 @@ class Cli
 
   end
 
-  def proccess_help_commands(eval_input)
+  def process_help_commands(eval_input)
+
     if eval_input.help_load?
       outstream.puts Display.help_load
+
     elsif eval_input.help_queue_count?
       outstream.puts Display.help_queue_count
+
     elsif eval_input.help_queue_clear?
       outstream.puts Display.help_queue_clear
+
     elsif eval_input.help_queue_print?
       outstream.puts Display.help_queue_print
+
     elsif eval_input.help_queue_save_to?
       outstream.puts Display.help_queue_save_to
+
     elsif eval_input.help_find_by?
       outstream.puts Display.help_find_by
+
     elsif eval_input.root_menu?
       outstream.puts Display.root_menu
+
     else
       outstream.puts Display.invalid_input
     end
@@ -62,22 +70,27 @@ class Cli
 
   def process_program_commands(eval_input)
     queue = QueueManager.new
+
     if eval_input.load?
       filename = eval_input.return_attribute
       Loader.create_entries_from(filename)
       outstream.puts Display.load_file
+
     elsif eval_input.queue_count?
       outstream.puts Display.count("#{queue.count}")
+
     elsif eval_input.queue_clear?
       queue.clear
       outstream.puts Display.clear
-    # elsif eval_input.queue_print?
+
+    elsif eval_input.queue_print?
     #   new_queue = queue.print_out_queue
     #   require 'pry'
     #   binding.pry
     #   outstream.puts new_queue
-    # elsif eval_input.find_by?
-    #   criteria = eval_input.return_find_by_criteria
+    elsif eval_input.find_by?
+      criteria = eval_input.return_find_by_criteria
+
      end
   end
 

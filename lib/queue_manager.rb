@@ -28,7 +28,7 @@ class QueueManager
     sort_by(attribute) if attribute
       puts 'FIRST NAME LAST NAME EMAIL ZIPCODE CITY STATE ADDRESS PHONE'
     new_queue.map do |entry|
-      puts "#{entry.first_name}\t#{entry.last_name}\t#{entry.email_address}\t#{entry.home_phone}\t#{entry.street}\t#{entry.city}\t#{entry.state}\t#{entry.zipcode}\n\}"
+      #puts "#{entry.first_name}\t#{entry.last_name}\t#{entry.email_address}\t#{entry.home_phone}\t#{entry.street}\t#{entry.city}\t#{entry.state}\t#{entry.zipcode}\n\}"
     end
   end
 

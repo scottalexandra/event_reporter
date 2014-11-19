@@ -37,7 +37,7 @@ module Display
   def self.help_menu
       "Help Menu\nGet help on the following topics: \nhelp load \n"\
       "help queue count \nhelp queue clear \nhelp queue print \nhelp queue "\
-      "save to \nhelp find by "
+      "save to \nhelp find by \n "
   end
 
   def self.help_load
@@ -70,15 +70,16 @@ module Display
     "containing the criteria when sorted by the specified attribute."
   end
 
-  def self.help_quit
-    "press 'q' at anytime to exit help menu"
-  end
+  # def self.help_quit
+  #   "press 'q' at anytime to exit help menu"
+  # end
 
-  def self.header
-    "LAST NAME \tFIRST NAME \t\tEMAIL \t\t\t \tZIPCODE \tCITY \tSTATE \tADDRESS \t\t\t \tPHONE"
-  end
+  # def self.header
+  #   "FIRST NAME \tLAST NAME \t\tEMAIL \t\t\t \tZIPCODE \tCITY \tSTATE \tADDRESS \t\t\t \tPHONE"
+  # end
 
   def self.invalid_input
     "Input is not valid"
   end
+
 end

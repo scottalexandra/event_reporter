@@ -24,7 +24,7 @@ class QueueManager
     new_queue.flatten!
   end
 
-  def print_out_queue(attribute)
+  def print_out_queue(attribute = nil)
     sort_by(attribute) if attribute
     new_queue.map do |entry|
       puts entry.format_for_print

@@ -5,6 +5,14 @@ class EvaluateInput
   def initialize(user_input)
     @user_input = user_input.downcase
   end
+  
+  def return_attribute
+    user_input.split[-1]
+  end
+
+  def return_find_by_criteria
+    criteria = user_input.split[-2..-1]
+  end
 
   def quit?
     user_input == 'q' || user_input == 'quit'
@@ -42,7 +50,38 @@ class EvaluateInput
     user_input == 'help find by' || user_input == 'find by'
   end
 
-  def print?
+
+
+
+  # def print?
+  #   user_input == 'queue print'
+  # end
+
+  def load?
+    user_input.include?('load')
+  end
+
+  def queue_count?
+    user_input == 'queue count'
+  end
+
+  def queue_clear?
+    user_input == 'queue clear'
+  end
+
+  def queue_print?
     user_input == 'queue print'
+  end
+
+  def queue_print_by?
+    user_input.include?('print by')
+  end
+
+  def queue_save_to?
+    user_input.include?('save to')
+  end
+
+  def find_by?
+    user_input.include?('find by')
   end
 end

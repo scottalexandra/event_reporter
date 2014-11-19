@@ -18,7 +18,7 @@ class SanitizerTest < Minitest::Test
   def test_it_cleans_home_phone
     skip
     clean_data = Sanitizer.new
-    assert clean_data.clean_home_phone('7147738089').include?('714.773.8089')
+    assert_equal '(714) 773-8089', clean_data.clean_home_phone('7147738089').include?('(714) 773-8089')
   end
 
   def test_it_cleans_city

@@ -47,6 +47,7 @@ class EntryRepoTest < Minitest::Test
  end
 
   def test_search_by_home_phone
+
     entries = [
     { first_name: 'allison', last_name: 'nguyen', home_phone: '615.438.5000' },
     { first_name: 'sarah', last_name: 'nguyen', home_phone: '414.520.5000' },
@@ -59,6 +60,7 @@ class EntryRepoTest < Minitest::Test
   end
 
   def test_search_by_zip_code
+
     entries = [
       { zipcode: '80023' },
       { zipcode: '80027' },
@@ -72,6 +74,7 @@ class EntryRepoTest < Minitest::Test
   end
 
   def test_search_by_email_address
+
     entries = [
       { email_address: 'manny@tothemoon.com' },
       { email_address: 'shawni18@aol.com' },
@@ -84,6 +87,7 @@ class EntryRepoTest < Minitest::Test
   end
 
   def test_search_by_city
+
     entries = [
       { city: 'new york' },
       { city: 'san francisco'},
@@ -97,6 +101,7 @@ class EntryRepoTest < Minitest::Test
   end
 
   def test_search_by_state
+
     entries = [
       { state: 'california' },
       { state: 'north dakota'},
@@ -109,6 +114,7 @@ class EntryRepoTest < Minitest::Test
   end
 
   def test_search_by_street
+    
     entries = [
       { street: '1615 Hill Top ln.'},
       { street: '121 Faxon Dr.'},

@@ -41,22 +41,20 @@ class EntryRepo
 
   def find_attribute_criteria(attribute, criteria)
     case attribute
-    when "first_name"
+    when 'first_name'
       search_by_first_name(criteria)
-    when "last_name"
+    when 'last_name'
       search_by_last_name(criteria)
-    when "home_phone"
+    when 'home_phone'
       search_by_home_phone(criteria)
-    when "email_address"
+    when 'email_address'
       search_by_email_address(criteria)
-    when "zipcode"
+    when 'zipcode'
       search_by_zipcode(criteria)
-    when "city"
+    when 'city'
       search_by_city(criteria)
-    when "state"
+    when 'state'
       search_by_state(criteria)
     end
   end
-
-
 end

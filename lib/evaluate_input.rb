@@ -1,16 +1,14 @@
 class EvaluateInput
-
   attr_accessor :user_input, :attribute, :criteria
 
   def initialize(user_input)
     @user_input = user_input.downcase
-    @attribute = ""
-    @criteria = ""
+    @attribute = ''
+    @criteria = ''
   end
 
   def return_attribute
     user_input.split[-1] if user_input.split.count > 2
-
   end
 
   def return_find_by_criteria
@@ -20,19 +18,17 @@ class EvaluateInput
       @criteria = results[-1]
     elsif user_input.split.count == 5
       results = user_input.split[-3..-1]
-      @attribute = results[0..1].join("_")
+      @attribute = results[0..1].join('_')
       @criteria = results[2]
     end
   end
-
-
 
   def quit?
     user_input == 'q' || user_input == 'quit'
   end
 
   def root_menu?
-    user_input == 'm' || user_input == "main menu"
+    user_input == 'm' || user_input == 'main menu'
   end
 
   def help_menu?

@@ -49,6 +49,8 @@ class EntryRepo
       search_by_home_phone(criteria)
     when 'email_address'
       search_by_email_address(criteria)
+    when 'street_address'
+      search_by_street_address(critiria)
     when 'zipcode'
       search_by_zipcode(criteria)
     when 'city'

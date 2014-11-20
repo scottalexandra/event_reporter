@@ -4,38 +4,30 @@ require_relative '../lib/sanitizer'
 class SanitizerTest < Minitest::Test
 
   def test_it_cleans_first_name
-
-    clean_data = Sanitizer.new
-    assert clean_data.clean_first_name('MiGUel').include?('miguel')
+    assert Sanitizer.clean_first_name('MiGUel').include?('miguel')
   end
 
   def test_it_cleans_last_name
-
-    clean_data = Sanitizer.new
-    assert clean_data.clean_last_name('NavarrO').include?('navarro')
+    assert Sanitizer.clean_last_name('NavarrO').include?('navarro')
   end
 
   def test_it_cleans_home_phone
-    skip
-    clean_data = Sanitizer.new
-    assert_equal '714.773.8089', clean_data.clean_home_phone('7147738089').include?('714.773.8089')
+    assert Sanitizer.clean_home_phone('7147738089').include?('7147738089')
+  end
+
+  def test_it_cleans_street
+    assert Sanitizer.clean_street('121 faxon dr.').include?('121 Faxon Dr.')
   end
 
   def test_it_cleans_city
-
-    clean_data = Sanitizer.new
-    assert clean_data.clean_city('San Francisco').include?('san francisco')
+    assert Sanitizer.clean_city('San Francisco').include?('san francisco')
   end
 
   def test_it_cleans_state
-
-    clean_data = Sanitizer.new
-    assert clean_data.clean_state('CA').include?('ca')
+    assert Sanitizer.clean_state('ca').include?('CA')
   end
 
   def test_it_cleans_zip_code
-
-    clean_data = Sanitizer.new
-    assert clean_data.clean_zipcode('890').include?('00890')
+    assert Sanitizer.clean_zipcode('890').include?('00890')
   end
 end

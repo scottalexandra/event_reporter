@@ -30,21 +30,6 @@ class QueueManager
     new_queue.sort! { |entry| entry.send(attribute) }
   end
 
-  # def queue_save_to(_filename)
-  #   CSV.open('filename', 'w') do |csv|
-  #     csv << ['FIRST NAME', 'LAST NAME', 'EMAIL', 'ZIPCODE', 'CITY', 'STATE', 'ADDRESS', 'PHONE']
-  #     new_queue.each do |entry|
-  #       csv << format_for_csv
-  #     end
-  #   end
-  # end
-  #
-  # def format_for_csv
-  #   instance_variables.map do |ivar|
-  #     instance_variable_get(ivar)
-  #   end
-  # end
-
   def queue_save_to(file)
     CSV.open("data/#{file}", 'w') do |csv|
       column_names = %w( first_name last_name email_address home_phone street city state zipcode )

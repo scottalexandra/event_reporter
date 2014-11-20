@@ -69,14 +69,6 @@ module Display
     'containing the criteria when sorted by the specified attribute.'
   end
 
-  # def self.help_quit
-  #   "press 'q' at anytime to exit help menu"
-  # end
-
-  # def self.header
-  #   "FIRST NAME \tLAST NAME \t\tEMAIL \t\t\t \tZIPCODE \tCITY \tSTATE \tADDRESS \t\t\t \tPHONE"
-  # end
-
   def self.invalid_input
     'Input is not valid'
   end

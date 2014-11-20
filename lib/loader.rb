@@ -1,6 +1,6 @@
 require 'csv'
 require_relative 'entry'
-# require_relative 'sanitizer'
+
 class Loader
   attr_reader :contents
 

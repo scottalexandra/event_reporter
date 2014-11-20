@@ -11,13 +11,6 @@ class Entry
     @zipcode       = Sanitizer.clean_zipcode(data[:zipcode])
     @city          = Sanitizer.clean_city(data[:city])
     @state         = Sanitizer.clean_state(data[:state])
-    @street        = data[:street].to_s.downcase
+    @street        = Sanitizer.clean_street(data[:street]).to_s
   end
-
-  # def name
-  #   "#{@first_name} #{@last_name}"
-  # end
-  #
-  #
-  # end
 end

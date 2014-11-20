@@ -17,9 +17,22 @@ class EvaluateInputTest < Minitest::Test
     refute user_input.return_attribute
   end
 
+  def test_return_find_by_attribute
+    user_input = EvaluateInput.new("queue find attribute criteria")
+    user_input.return_find_by_criteria
+    assert_equal "attribute", user_input.attribute
+  end
+
   def test_return_find_by_criteria
-    user_input = EvaluateInput.new("queue find by attribute criteria")
-    assert_equal ["attribute","criteria"], user_input.return_find_by_criteria
+  user_input = EvaluateInput.new("queue find attribute criteria")
+  user_input.return_find_by_criteria
+  assert_equal "criteria", user_input.criteria
+  end
+
+  def test_return_find_by_attribute_again
+  user_input = EvaluateInput.new("queue find first name criteria")
+  user_input.return_find_by_criteria
+  assert_equal "first_name", user_input.attribute  
   end
 
 
@@ -59,8 +72,8 @@ class EvaluateInputTest < Minitest::Test
   end
 
   def test_help_find_by?
-    help = EvaluateInput.new("help find by")
-    assert help.help_find_by?
+    help = EvaluateInput.new("help find")
+    assert help.help_find?
   end
 
   def test_load?
@@ -104,13 +117,13 @@ class EvaluateInputTest < Minitest::Test
   end
 
   def test_queue_find_by
-    user_input = EvaluateInput.new("find by attribute criteria")
-    assert user_input.find_by?
+    user_input = EvaluateInput.new("find attribute criteria")
+    assert user_input.find?
   end
 
   def test_queue_find_by_again
     user_input = EvaluateInput.new("find")
-    refute user_input.find_by?
+    assert user_input.find?
   end
 
 end

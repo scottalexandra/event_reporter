@@ -1,5 +1,5 @@
 require_relative 'entry_repo'
-#require 'CSV'
+require 'table_print'
 
 
 
@@ -26,10 +26,7 @@ class QueueManager
 
   def print_out_queue(attribute = nil)
     sort_by(attribute) if attribute
-      puts 'FIRST NAME LAST NAME EMAIL ZIPCODE CITY STATE ADDRESS PHONE'
-    new_queue.map do |entry|
-      #puts "#{entry.first_name}\t#{entry.last_name}\t#{entry.email_address}\t#{entry.home_phone}\t#{entry.street}\t#{entry.city}\t#{entry.state}\t#{entry.zipcode}\n\}"
-    end
+    tp new_queue 
   end
 
   def sort_by(attribute)

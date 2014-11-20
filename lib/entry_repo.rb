@@ -4,7 +4,7 @@ require_relative 'loader'
 class EntryRepo
   attr_reader :entries
   def initialize(entries)
-    @entries ||= entries.map { |entry| Entry.new(entry)}
+    @entries = entries
   end
 
   def search_by_last_name(last_name)
@@ -38,4 +38,25 @@ class EntryRepo
   def search_by_street(street)
     entries.select { |entry| entry.street == street }
   end
+
+  def find_attribute_criteria(attribute, criteria)
+    case attribute
+    when "first_name"
+      search_by_first_name(criteria)
+    when "last_name"
+      search_by_last_name(criteria)
+    when "home_phone"
+      search_by_home_phone(criteria)
+    when "email_address"
+      search_by_email_address(criteria)
+    when "zipcode"
+      search_by_zipcode(criteria)
+    when "city"
+      search_by_city(criteria)
+    when "state"
+      search_by_state(criteria)
+    end
+  end
+
+
 end

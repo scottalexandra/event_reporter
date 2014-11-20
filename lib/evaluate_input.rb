@@ -1,18 +1,30 @@
 class EvaluateInput
 
-  attr_accessor :user_input
+  attr_accessor :user_input, :attribute, :criteria
 
   def initialize(user_input)
     @user_input = user_input.downcase
+    @attribute = ""
+    @criteria = ""
   end
 
   def return_attribute
     user_input.split[-1] if user_input.split.count > 2
+
   end
 
   def return_find_by_criteria
-    user_input.split[-2..-1] if user_input.split.count > 3
+    if user_input.split.count == 4
+      results = user_input.split[-2..-1]
+      @attribute = results[-2]
+      @criteria = results[-1]
+    elsif user_input.split.count == 5
+      results = user_input.split[-3..-1]
+      @attribute = results[0..1].join("_")
+      @criteria = results[2]
+    end
   end
+
 
 
   def quit?
@@ -47,8 +59,8 @@ class EvaluateInput
     user_input == 'help queue save to'
   end
 
-  def help_find_by?
-    user_input == 'help find by' 
+  def help_find?
+    user_input == 'help find'
   end
 
   def load?
@@ -75,7 +87,7 @@ class EvaluateInput
     user_input.include?('save to')
   end
 
-  def find_by?
-    user_input.include?('find by')
+  def find?
+    user_input.include?('queue find')
   end
 end

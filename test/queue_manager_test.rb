@@ -32,7 +32,8 @@ class QueueManagerTest < Minitest::Test
       { first_name: 'allison', last_name: 'hankins', phone_number: '414.520.5000' },
       { first_name: 'jennifer', last_name: 'cope', phone_number: '704.813.3000' }
     ]
-    repository = EntryRepo.new(entries)
+    new_entry = Entry.new(entries)
+    repository = EntryRepo.new(new_entry)
     entries = repository.search_by_first_name("allison").sort_by { |e| e.first_name }
     queue.add_queue(entries)
     assert_equal 2, queue.count

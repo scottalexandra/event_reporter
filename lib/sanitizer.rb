@@ -1,5 +1,5 @@
 require 'csv'
-
+require 'pry'
 class Sanitizer
   def self.clean_first_name(first_name)
     first_name.strip.downcase
@@ -10,7 +10,14 @@ class Sanitizer
   end
 
   def self.clean_home_phone(home_phone)
-    home_phone.to_s.scan(/\S+[\s]\d+[\D]\d{4}/).join.rjust(14, '0')[0..14]
+    phone = home_phone.chars
+    # binding.pry
+    # area_code = phone[0..2].join
+    # first_three = phone[3..5].join
+    # last_four = phone[6..9].join
+    # "(" + area_code + ")" + first_three + "-" + last_four
+    home_phone.to_s.scan(/\d/).join.rjust(10, "0")[0..9]
+  
   end
 
   def self.clean_city(city)

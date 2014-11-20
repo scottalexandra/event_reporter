@@ -18,9 +18,6 @@ class Entry
   #   "#{@first_name} #{@last_name}"
   # end
   #
-  # def format_for_csv
-  #   instance_variables.map do |ivar|
-  #     instance_variable_get(ivar)
-  #   end
+  #
   # end
 end

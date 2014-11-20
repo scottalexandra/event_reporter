@@ -88,6 +88,9 @@ class Cli
       queue.add_queue(new_queue)
       outstream.puts Display.placed_in_queue
 
+    elsif eval_input.queue_save_to?
+      filename = eval_input.return_attribute
+      queue.queue_save_to(filename)
     end
   end
 end

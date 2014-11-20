@@ -23,7 +23,7 @@ class Sanitizer
   end
 
   def self.clean_state(state)
-    state.to_s.strip.upcase[0..1]
+    state.to_s.strip.downcase[0..1]
   end
 
   def self.clean_zipcode(zipcode)

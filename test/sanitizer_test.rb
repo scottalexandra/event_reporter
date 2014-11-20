@@ -16,7 +16,7 @@ class SanitizerTest < Minitest::Test
   end
 
   def test_it_cleans_street
-    assert Sanitizer.clean_street('121 faxon dr.').include?('121 Faxon Dr.')
+    assert Sanitizer.clean_street('121 faxon dr.').include?('121 faxon dr.')
   end
 
   def test_it_cleans_city

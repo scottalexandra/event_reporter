@@ -12,7 +12,11 @@ class EvaluateInput
   end
 
   def return_find_by_criteria
-    if user_input.split.count == 3
+    if user_input.split.count > 4
+      results = user_input.split[1..-1]
+      @attribute = results[0]
+      @criteria = results[1..-1].join(" ")
+    elsif user_input.split.count == 3
       results = user_input.split[-2..-1]
       @attribute = results[-2]
       @criteria = results[-1]

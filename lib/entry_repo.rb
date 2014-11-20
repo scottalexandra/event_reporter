@@ -49,14 +49,14 @@ class EntryRepo
       search_by_home_phone(criteria)
     when 'email_address'
       search_by_email_address(criteria)
-    when 'street_address'
-      search_by_street_address(critiria)
     when 'zipcode'
       search_by_zipcode(criteria)
     when 'city'
       search_by_city(criteria)
     when 'state'
       search_by_state(criteria)
+    when 'street'
+      search_by_street(criteria)
     end
   end
 end

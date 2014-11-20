@@ -12,11 +12,11 @@ class EvaluateInput
   end
 
   def return_find_by_criteria
-    if user_input.split.count == 4
+    if user_input.split.count == 3
       results = user_input.split[-2..-1]
       @attribute = results[-2]
       @criteria = results[-1]
-    elsif user_input.split.count == 5
+    elsif user_input.split.count == 4
       results = user_input.split[-3..-1]
       @attribute = results[0..1].join('_')
       @criteria = results[2]
@@ -80,10 +80,10 @@ class EvaluateInput
   end
 
   def queue_save_to?
-    user_input.include?('save to')
+    user_input.include?('queue save to')
   end
 
   def find?
-    user_input.include?('queue find')
+    user_input.split[0] == ('find')
   end
 end

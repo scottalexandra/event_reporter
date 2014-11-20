@@ -91,6 +91,8 @@ class Cli
     elsif eval_input.queue_save_to?
       filename = eval_input.return_attribute
       queue.queue_save_to(filename)
+    elsif user_input != user_input.include?("help")
+      outstream.puts Display.invalid_input
     end
   end
 end

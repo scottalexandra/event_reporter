@@ -32,7 +32,7 @@ class EvaluateInputTest < Minitest::Test
   def test_return_find_by_attribute_again
   user_input = EvaluateInput.new("queue find first name criteria")
   user_input.return_find_by_criteria
-  assert_equal "first_name", user_input.attribute  
+  assert_equal "first_name", user_input.attribute
   end
 
 
@@ -107,13 +107,13 @@ class EvaluateInputTest < Minitest::Test
   end
 
   def test_queue_save_to
-    user_input = EvaluateInput.new("save to attribute")
+    user_input = EvaluateInput.new("queue save to attribute")
     assert user_input.queue_save_to?
   end
 
   def test_queue_save_to_again
-    user_input = EvaluateInput.new("save attribute")
-    refute user_input.queue_save_to?
+    user_input = EvaluateInput.new("queue save to filename.csv")
+    assert user_input.queue_save_to?
   end
 
   def test_queue_find_by
@@ -122,7 +122,7 @@ class EvaluateInputTest < Minitest::Test
   end
 
   def test_queue_find_by_again
-    user_input = EvaluateInput.new("find")
+    user_input = EvaluateInput.new('find')
     assert user_input.find?
   end
 
